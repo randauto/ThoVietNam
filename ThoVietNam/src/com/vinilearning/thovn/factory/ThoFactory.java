@@ -394,168 +394,168 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 62.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Nhớ", "Hồng Nguyên",
+				"nho.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 63.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Trời và đất", "Phan Thị Thanh Nhàn",
+				"troivadat.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 64.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Người đàn bà ngồi đan", "Ý Nhi",
+				"nguoidanbangoidan.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 65.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Nhớ máu", "Trần Mai Ninh",
+				"nhomau.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 66.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Mẹ", "Nguyễn Ngọc Oánh",
+				"me.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 67.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Bông và mây", "Ngô Văn Phú",
+				"bongvamay.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 68.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Muôn vàn tình thân yêu trùm lên khắp quê hương", "Việt Phương",
+				"muonvantinhthanyeutrumlenkhapquehuong.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 69.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Đợi", "Vũ Quần Phương",
+				"doi.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 70.
+		builder = new ThoVnBuilder("Tên làng", "Y Phương",
+				"tenlang.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 71.
+		builder = new ThoVnBuilder("Lời mẹ dặn", " Phùng Quán",
+				"loimedan.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 72.
+		builder = new ThoVnBuilder("Có khi nào", "Bùi Minh Quốc",
+				"cokhinao.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 73.
+		builder = new ThoVnBuilder("Tự hát", "Xuân Quỳnh",
+				"tuhat.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 74.
+		builder = new ThoVnBuilder("Áo lụa Hà Đông", "Nguyên Sa",
+				"aoluahadong.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 75.
+		builder = new ThoVnBuilder("Bài thơ của một người yêu nước mình", "Trần Vàng Sao",
+				"baithocuamotnguoiyeunuocminh.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 76.
+		builder = new ThoVnBuilder("Người đẹp", "Lò Ngân Sủn",
+				"nguoidep.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 77.
+		builder = new ThoVnBuilder("Đồng dao cho người lớn", "Nguyễn Trọng Tạo",
+				"dongdaochonguoilon.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 78.
+		builder = new ThoVnBuilder("Tống biệt hành", "Thâm Tâm",
+				"tongbiethanh.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 79.
+		builder = new ThoVnBuilder("Dấu chân qua trảng cỏ", "Thanh Thảo",
+				"dauchanquatrangco.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 80.
+		builder = new ThoVnBuilder("Đất nước", "Nguyễn Đình Thi",
+				"datnuoc.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 81.
+		builder = new ThoVnBuilder("Những người đàn bà gánh nước sông ", "Nguyễn Quang Thiều",
+				"nhungnguoidanbaganhnuocsong.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 82.
+		builder = new ThoVnBuilder("Nghe tiếng cuốc kêu", "Hữu Thỉnh",
+				"nghetiengcuockeu.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 83.
+		builder = new ThoVnBuilder("Bao giờ trở lại", "Hoàng Trung Thông",
+				"baogiotrolai.html").setUrlTacGia("");
+		mThoVn = builder.build();
+		data.add(mThoVn);
+
+		// 84.
 		builder = new ThoVnBuilder("", "",
 				"nguyentieu.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
-		// 1.
+		// 85.
 		builder = new ThoVnBuilder("", "",
 				"nguyentieu.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
-		// 2.
+		// 86.
 		builder = new ThoVnBuilder("", "",
 				"nguyentieu.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
-		// 3.
+		// 87.
 		builder = new ThoVnBuilder("", "",
 				"nguyentieu.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
-		// 4.
+		// 88.
 		builder = new ThoVnBuilder("", "",
 				"nguyentieu.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
-		// 5.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 6.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 7.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 8.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 9.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 10.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 1.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 2.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 3.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 4.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 5.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 6.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 7.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 8.
-		builder = new ThoVnBuilder("", "",
-				"nguyentieu.html").setUrlTacGia("");
-		mThoVn = builder.build();
-		data.add(mThoVn);
-
-		// 9.
+		// 89.
 		builder = new ThoVnBuilder("", "",
 				"nguyentieu.html").setUrlTacGia("");
 		mThoVn = builder.build();
