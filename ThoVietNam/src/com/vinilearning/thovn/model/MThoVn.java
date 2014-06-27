@@ -1,6 +1,6 @@
 package com.vinilearning.thovn.model;
 
-public class ThoVn {
+public class MThoVn {
 	private final String tenbai;
 	private final String tacgia;
 	private final String urlTacGia;
@@ -22,7 +22,7 @@ public class ThoVn {
 		return urlTenBai;
 	}
 
-	private ThoVn(ThoVnBuilder builder) {
+	private MThoVn(ThoVnBuilder builder) {
 		this.tenbai = builder.tenbai;
 		this.tacgia = builder.tacgia;
 		this.urlTacGia = builder.urlTacGia;
@@ -60,5 +60,10 @@ public class ThoVn {
 			this.urlTenBai = urlTenBai;
 			return this;
 		}
+		
+		public MThoVn build(){
+			return new MThoVn(this);
+		}
+		
 	}
 }

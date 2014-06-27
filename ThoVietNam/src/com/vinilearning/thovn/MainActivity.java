@@ -140,7 +140,7 @@ public class MainActivity extends ActionBarActivity implements
 		@Override
 		public CharSequence getPageTitle(int position) {
 			Locale l = Locale.getDefault();
-			return getString(R.string.title_section1).toUpperCase(l);
+			return ("Bài " + position).toUpperCase(l);
 		}
 	}
 
