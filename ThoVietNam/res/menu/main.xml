@@ -6,6 +6,7 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
+        android:icon="@drawable/ic_bookmark_tick"
         android:title="@string/action_settings"
         app:showAsAction="always"/>
     <item

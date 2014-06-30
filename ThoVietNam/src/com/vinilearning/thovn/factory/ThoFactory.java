@@ -8,6 +8,12 @@ import com.vinilearning.thovn.model.MThoVn;
 import com.vinilearning.thovn.model.MThoVn.ThoVnBuilder;
 
 public class ThoFactory {
+	public static ArrayList<MThoVn> lstThoVn;
+
+	public ArrayList<MThoVn> getLstThoVn() {
+		return lstThoVn;
+	}
+
 	private static ThoFactory instance;
 	private Context context;
 
@@ -40,26 +46,26 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 3.
-		builder = new ThoVnBuilder("Những bóng người trên sân ga", "Nguyễn Bính",
-				"nhungbongnguoitrensanga.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Những bóng người trên sân ga",
+				"Nguyễn Bính", "nhungbongnguoitrensanga.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 4.
-		builder = new ThoVnBuilder("Tạm biệt Huế", "Thu Bồn",
-				"tambiethue.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Tạm biệt Huế", "Thu Bồn", "tambiethue.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 5.
-		builder = new ThoVnBuilder("Vào chùa", "Đồng Đức Bốn",
-				"vaochua.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Vào chùa", "Đồng Đức Bốn", "vaochua.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 6.
-		builder = new ThoVnBuilder("Sư đoàn", "Phạm Ngọc Cảnh",
-				"sudoan.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Sư đoàn", "Phạm Ngọc Cảnh", "sudoan.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -70,8 +76,8 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 8.
-		builder = new ThoVnBuilder("Núi Đôi", "Vũ Cao",
-				"nuidoi.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Núi Đôi", "Vũ Cao", "nuidoi.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -82,8 +88,8 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 10.
-		builder = new ThoVnBuilder("Tràng Giang", "Huy Cận",
-				"tranggiang.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Tràng Giang", "Huy Cận", "tranggiang.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -112,8 +118,8 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 15.
-		builder = new ThoVnBuilder("Đường về quê mẹ", "",
-				"duongvequeme.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Đường về quê mẹ", "", "duongvequeme.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -124,8 +130,8 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 17.
-		builder = new ThoVnBuilder("Nguyệt cầm", "Xuân Diệu",
-				"nguyetcam.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Nguyệt cầm", "Xuân Diệu", "nguyetcam.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -136,8 +142,8 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 19.
-		builder = new ThoVnBuilder("Tây tiến", "Quang Dũng",
-				"taytien.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Tây tiến", "Quang Dũng", "taytien.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -148,14 +154,14 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 21.
-		builder = new ThoVnBuilder("Đò lèn", "Nguyễn Duy",
-				"dolen.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Đò lèn", "Nguyễn Duy", "dolen.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 22.
-		builder = new ThoVnBuilder("Chiều", "Hồ Dzếnh",
-				"chieu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Chiều", "Hồ Dzếnh", "chieu.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -166,8 +172,8 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 24.
-		builder = new ThoVnBuilder("Cha tôi", "Lê Đạt",
-				"chatoi.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Cha tôi", "Lê Đạt", "chatoi.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -184,8 +190,8 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 27.
-		builder = new ThoVnBuilder("Mắt buồn", "Bùi Giáng",
-				"matbuon.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Mắt buồn", "Bùi Giáng", "matbuon.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -214,14 +220,14 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 32.
-		builder = new ThoVnBuilder("Đêm mưa", "Hoàn",
-				"demmua.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Đêm mưa", "Hoàn", "demmua.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 33.
-		builder = new ThoVnBuilder("Những đứa trẻ chơi trước cửa đền", "Thi Hoàng",
-				"nhungduatrechoitruocden.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Những đứa trẻ chơi trước cửa đền",
+				"Thi Hoàng", "nhungduatrechoitruocden.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -250,26 +256,26 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 38.
-		builder = new ThoVnBuilder("Người về", "Hoàng Hưng",
-				"nguoive.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Người về", "Hoàng Hưng", "nguoive.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 39.
-		builder = new ThoVnBuilder("Đồng chí", "Chính Hữu",
-				"dongchi.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Đồng chí", "Chính Hữu", "dongchi.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 40.
-		builder = new ThoVnBuilder("Khi con tu hú", "Tố Hữu",
-				"khicontuhu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Khi con tu hú", "Tố Hữu", "khicontuhu.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 41.
-		builder = new ThoVnBuilder("Lên Cấm sơn", "Thôi Hữu",
-				"lencamson.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Lên Cấm sơn", "Thôi Hữu", "lencamson.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -286,8 +292,8 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 44.
-		builder = new ThoVnBuilder("Tỳ bà", "Bích Khê",
-				"tyba.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Tỳ bà", "Bích Khê", "tyba.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -298,50 +304,50 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 46.
-		builder = new ThoVnBuilder("Thu điếu", "Nguyễn Khuyến",
-				"thudieu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Thu điếu", "Nguyễn Khuyến", "thudieu.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 47.
-		builder = new ThoVnBuilder("Bến Mi Lăng", "Yến Lan",
-				"benmilang.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Bến Mi Lăng", "Yến Lan", "benmilang.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 48.
-		builder = new ThoVnBuilder("Tháp Chàm", "Văn Lê",
-				"thapcham.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Tháp Chàm", "Văn Lê", "thapcham.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 49.
-		builder = new ThoVnBuilder("Ông đồ", "Vũ Đình Liên",
-				"ongdo.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Ông đồ", "Vũ Đình Liên", "ongdo.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 50.
-		builder = new ThoVnBuilder("Đèo cả", "Hữu Loan",
-				"deoca.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Đèo cả", "Hữu Loan", "deoca.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 51.
-		builder = new ThoVnBuilder("Viếng bạn", "Hoàng Lộc",
-				"viengban.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Viếng bạn", "Hoàng Lộc", "viengban.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 52.
-		builder = new ThoVnBuilder("Tiếng thu", "Lưu Trọng Lư",
-				"tiengthu.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Tiếng thu", "Lưu Trọng Lư", "tiengthu.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 53.
-		builder = new ThoVnBuilder("Nhớ rừng", "Thế Lữ",
-				"nhorung.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Nhớ rừng", "Thế Lữ", "nhorung.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -358,14 +364,14 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 56.
-		builder = new ThoVnBuilder("Dặn con", "Trần Nhuận Minh",
-				"dancon.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Dặn con", "Trần Nhuận Minh", "dancon.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 57.
-		builder = new ThoVnBuilder("Hội Lim", "Vũ Đình Minh",
-				"hoilim.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Hội Lim", "Vũ Đình Minh", "hoilim.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -388,14 +394,14 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 61.
-		builder = new ThoVnBuilder("Thị Màu", "Anh Ngọc",
-				"thimau.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Thị Màu", "Anh Ngọc", "thimau.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 62.
-		builder = new ThoVnBuilder("Nhớ", "Hồng Nguyên",
-				"nho.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Nhớ", "Hồng Nguyên", "nho.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -412,14 +418,14 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 65.
-		builder = new ThoVnBuilder("Nhớ máu", "Trần Mai Ninh",
-				"nhomau.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Nhớ máu", "Trần Mai Ninh", "nhomau.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 66.
-		builder = new ThoVnBuilder("Mẹ", "Nguyễn Ngọc Oánh",
-				"me.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Mẹ", "Nguyễn Ngọc Oánh", "me.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -430,26 +436,28 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 68.
-		builder = new ThoVnBuilder("Muôn vàn tình thân yêu trùm lên khắp quê hương", "Việt Phương",
-				"muonvantinhthanyeutrumlenkhapquehuong.html").setUrlTacGia("");
+		builder = new ThoVnBuilder(
+				"Muôn vàn tình thân yêu trùm lên khắp quê hương",
+				"Việt Phương", "muonvantinhthanyeutrumlenkhapquehuong.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 69.
-		builder = new ThoVnBuilder("Đợi", "Vũ Quần Phương",
-				"doi.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Đợi", "Vũ Quần Phương", "doi.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 70.
-		builder = new ThoVnBuilder("Tên làng", "Y Phương",
-				"tenlang.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Tên làng", "Y Phương", "tenlang.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 71.
-		builder = new ThoVnBuilder("Lời mẹ dặn", " Phùng Quán",
-				"loimedan.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Lời mẹ dặn", " Phùng Quán", "loimedan.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -460,8 +468,8 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 73.
-		builder = new ThoVnBuilder("Tự hát", "Xuân Quỳnh",
-				"tuhat.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Tự hát", "Xuân Quỳnh", "tuhat.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -472,20 +480,21 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 75.
-		builder = new ThoVnBuilder("Bài thơ của một người yêu nước mình", "Trần Vàng Sao",
-				"baithocuamotnguoiyeunuocminh.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Bài thơ của một người yêu nước mình",
+				"Trần Vàng Sao", "baithocuamotnguoiyeunuocminh.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 76.
-		builder = new ThoVnBuilder("Người đẹp", "Lò Ngân Sủn",
-				"nguoidep.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Người đẹp", "Lò Ngân Sủn", "nguoidep.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 77.
-		builder = new ThoVnBuilder("Đồng dao cho người lớn", "Nguyễn Trọng Tạo",
-				"dongdaochonguoilon.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Đồng dao cho người lớn",
+				"Nguyễn Trọng Tạo", "dongdaochonguoilon.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -508,8 +517,9 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 81.
-		builder = new ThoVnBuilder("Những người đàn bà gánh nước sông ", "Nguyễn Quang Thiều",
-				"nhungnguoidanbaganhnuocsong.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Những người đàn bà gánh nước sông ",
+				"Nguyễn Quang Thiều", "nhungnguoidanbaganhnuocsong.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -538,8 +548,8 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 86.
-		builder = new ThoVnBuilder("Thăm lúa", "Trần Hữu Thung",
-				"thamlua.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Thăm lúa", "Trần Hữu Thung", "thamlua.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -579,21 +589,21 @@ public class ThoFactory {
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
-		//93.
+		// 93.
 		builder = new ThoVnBuilder("Đây thôn Vĩ Dạ", "Hàn Mặc Tử",
 				"daythonvida.html").setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 94.
-		builder = new ThoVnBuilder("Nhớ vợ", "Cầm Vĩnh Ui",
-				"nhovo.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Nhớ vợ", "Cầm Vĩnh Ui", "nhovo.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 95.
-		builder = new ThoVnBuilder("Em tắm", "Bạc Văn Ùi",
-				"emtam.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Em tắm", "Bạc Văn Ùi", "emtam.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
@@ -604,14 +614,15 @@ public class ThoFactory {
 		data.add(mThoVn);
 
 		// 97.
-		builder = new ThoVnBuilder("Tổ quốc bao giờ đẹp thế này chăng", "Chế Lan Viên",
-				"toquocbaogiodepthenaychang.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Tổ quốc bao giờ đẹp thế này chăng",
+				"Chế Lan Viên", "toquocbaogiodepthenaychang.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 
 		// 98.
-		builder = new ThoVnBuilder("Bếp lửa", "Bằng Việt",
-				"beplua.html").setUrlTacGia("");
+		builder = new ThoVnBuilder("Bếp lửa", "Bằng Việt", "beplua.html")
+				.setUrlTacGia("");
 		mThoVn = builder.build();
 		data.add(mThoVn);
 

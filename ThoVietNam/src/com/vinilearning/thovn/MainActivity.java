@@ -1,5 +1,7 @@
 package com.vinilearning.thovn;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import android.os.Bundle;
@@ -17,8 +19,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
+import com.vinilearning.thovn.factory.ThoFactory;
+import com.vinilearning.thovn.model.MThoVn;
+
 public class MainActivity extends ActionBarActivity implements
 		ActionBar.TabListener {
+
+	List<Fragment> fragList = new ArrayList<Fragment>();
+
+	Fragment f = null; // Thx to Andre Krause for his support!
+	PlaceholderFragment tf = null;
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -77,21 +87,26 @@ public class MainActivity extends ActionBarActivity implements
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+		switch (id) {
+		case R.id.action_settings:
+
+			break;
+
+		case R.id.action_about:
+
+			break;
+
+		default:
+			break;
 		}
+
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -106,6 +121,9 @@ public class MainActivity extends ActionBarActivity implements
 	@Override
 	public void onTabUnselected(ActionBar.Tab tab,
 			FragmentTransaction fragmentTransaction) {
+		if (fragList.size() > tab.getPosition()) {
+			ft.remove(fragList.get(tab.getPosition()));
+		}
 	}
 
 	@Override
@@ -125,22 +143,18 @@ public class MainActivity extends ActionBarActivity implements
 
 		@Override
 		public Fragment getItem(int position) {
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a PlaceholderFragment (defined as a static inner class
-			// below).
-			return PlaceholderFragment.newInstance(position + 1);
+			return PlaceholderFragment.newInstance(position);
 		}
 
 		@Override
 		public int getCount() {
-			// Show 3 total pages.
-			return 100;
+			return ThoFactory.lstThoVn.size();
 		}
 
 		@Override
 		public CharSequence getPageTitle(int position) {
 			Locale l = Locale.getDefault();
-			return ("Bài " + position).toUpperCase(l);
+			return ("Bài " + (position + 1)).toUpperCase(l);
 		}
 	}
 
@@ -153,6 +167,8 @@ public class MainActivity extends ActionBarActivity implements
 		 * fragment.
 		 */
 		private static final String ARG_SECTION_NUMBER = "section_number";
+
+		private MThoVn thoVn;
 
 		/**
 		 * Returns a new instance of this fragment for the given section number.
@@ -169,14 +185,21 @@ public class MainActivity extends ActionBarActivity implements
 		}
 
 		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-
-			View view = inflater.inflate(R.layout.fragment_main, null);
+		public View onCreateView(final LayoutInflater inflater,
+				ViewGroup container, Bundle savedInstanceState) {
+			View view;
+			view = inflater.inflate(R.layout.fragment_main, null);
 			WebView webView = (WebView) view.findViewById(R.id.webView);
-			/*textView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER)));*/
+
+			thoVn = ThoFactory.lstThoVn.get(getArguments().getInt(
+					ARG_SECTION_NUMBER));
+
+			webView.loadUrl("file:///android_asset/web/" + thoVn.getUrlTenBai());
 			return view;
+		}
+
+		public MThoVn getThoVn() {
+			return thoVn;
 		}
 	}
 

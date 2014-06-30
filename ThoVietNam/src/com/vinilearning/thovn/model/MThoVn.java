@@ -5,6 +5,7 @@ public class MThoVn {
 	private final String tacgia;
 	private final String urlTacGia;
 	private final String urlTenBai;
+	private boolean isBookmark = false;
 
 	public String getTenbai() {
 		return tenbai;
@@ -22,11 +23,16 @@ public class MThoVn {
 		return urlTenBai;
 	}
 
+	public boolean isBookmarked() {
+		return isBookmark;
+	}
+
 	private MThoVn(ThoVnBuilder builder) {
 		this.tenbai = builder.tenbai;
 		this.tacgia = builder.tacgia;
 		this.urlTacGia = builder.urlTacGia;
 		this.urlTenBai = builder.urlTenBai;
+		this.isBookmark = builder.isBookmark;
 	}
 
 	public static class ThoVnBuilder {
@@ -34,11 +40,17 @@ public class MThoVn {
 		private String tacgia;
 		private String urlTacGia;
 		private String urlTenBai;
+		private boolean isBookmark;
 
 		public ThoVnBuilder(String tenbai, String tacgia, String urlTenBai) {
 			this.tenbai = tenbai;
 			this.tacgia = tacgia;
 			this.urlTenBai = urlTenBai;
+		}
+
+		public ThoVnBuilder setBookmark(boolean isBookmark) {
+			this.isBookmark = isBookmark;
+			return this;
 		}
 
 		public ThoVnBuilder setTenBai(String tenbai) {
@@ -60,10 +72,10 @@ public class MThoVn {
 			this.urlTenBai = urlTenBai;
 			return this;
 		}
-		
-		public MThoVn build(){
+
+		public MThoVn build() {
 			return new MThoVn(this);
 		}
-		
+
 	}
 }
