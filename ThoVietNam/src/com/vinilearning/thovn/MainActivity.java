@@ -1,10 +1,15 @@
 package com.vinilearning.thovn;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -19,16 +24,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.vinilearning.thovn.factory.ThoFactory;
 import com.vinilearning.thovn.model.MThoVn;
+import com.vinilearning.thovn.utils.DialogUtils;
+import com.vinilearning.thovn.utils.SharedPreferencesStore;
 
 public class MainActivity extends ActionBarActivity implements
 		ActionBar.TabListener {
-
-	List<Fragment> fragList = new ArrayList<Fragment>();
-
-	Fragment f = null; // Thx to Andre Krause for his support!
-	PlaceholderFragment tf = null;
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -69,6 +73,7 @@ public class MainActivity extends ActionBarActivity implements
 				.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
 					@Override
 					public void onPageSelected(int position) {
+						curentPosition = position;
 						actionBar.setSelectedNavigationItem(position);
 					}
 				});
@@ -83,6 +88,58 @@ public class MainActivity extends ActionBarActivity implements
 					.setText(mSectionsPagerAdapter.getPageTitle(i))
 					.setTabListener(this));
 		}
+
+		(new Handler()).postDelayed(new Runnable() {
+
+			@Override
+			public void run() {
+				loadAdsView();
+
+			}
+		}, 1000);
+
+		mViewPager.setCurrentItem(SharedPreferencesStore.getInstance(this)
+				.getInt("pos"));
+	}
+
+	private int curentPosition;
+
+	AdView adView;
+
+	/**
+	 * Method used to load ads view.
+	 * 
+	 * @param rootView
+	 */
+	private void loadAdsView() {
+		adView = (AdView) findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder().build();
+		adView.loadAd(adRequest);
+	}
+
+	@Override
+	protected void onPause() {
+		if (adView != null) {
+			adView.pause();
+		}
+		super.onPause();
+	}
+
+	@Override
+	protected void onDestroy() {
+		if (adView != null) {
+			adView.destroy();
+			adView = null;
+		}
+		super.onDestroy();
+	}
+
+	@Override
+	protected void onResume() {
+		if (adView != null) {
+			adView.resume();
+		}
+		super.onResume();
 	}
 
 	@Override
@@ -95,12 +152,14 @@ public class MainActivity extends ActionBarActivity implements
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
 		switch (id) {
-		case R.id.action_settings:
-
+		case R.id.action_about:
+			DialogUtils.getInstance(MainActivity.this).showDialogAboutUs();
 			break;
 
-		case R.id.action_about:
-
+		case R.id.action_list:
+			Intent intent = new Intent(MainActivity.this,
+					ListLessonActivity.class);
+			startActivityForResult(intent, 100);
 			break;
 
 		default:
@@ -121,9 +180,6 @@ public class MainActivity extends ActionBarActivity implements
 	@Override
 	public void onTabUnselected(ActionBar.Tab tab,
 			FragmentTransaction fragmentTransaction) {
-		if (fragList.size() > tab.getPosition()) {
-			ft.remove(fragList.get(tab.getPosition()));
-		}
 	}
 
 	@Override
@@ -154,7 +210,7 @@ public class MainActivity extends ActionBarActivity implements
 		@Override
 		public CharSequence getPageTitle(int position) {
 			Locale l = Locale.getDefault();
-			return ("Bài " + (position + 1)).toUpperCase(l);
+			return (getString(R.string.lesson) + (position + 1)).toUpperCase(l);
 		}
 	}
 
@@ -193,7 +249,8 @@ public class MainActivity extends ActionBarActivity implements
 
 			thoVn = ThoFactory.lstThoVn.get(getArguments().getInt(
 					ARG_SECTION_NUMBER));
-
+			webView.getSettings().setBuiltInZoomControls(true);
+			webView.setBackgroundColor(0x00000000);
 			webView.loadUrl("file:///android_asset/web/" + thoVn.getUrlTenBai());
 			return view;
 		}
@@ -203,4 +260,43 @@ public class MainActivity extends ActionBarActivity implements
 		}
 	}
 
+	@Override
+	public void onBackPressed() {
+		AlertDialog.Builder builder = new Builder(MainActivity.this);
+		builder.setTitle(getString(R.string.qa_bookmark));
+		builder.setPositiveButton(getString(R.string.yes),
+				new OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						SharedPreferencesStore.getInstance(MainActivity.this)
+								.putInt("pos", curentPosition);
+						dialog.dismiss();
+						finish();
+					}
+				});
+
+		builder.setNegativeButton(getString(R.string.no),
+				new OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+						finish();
+					}
+				});
+
+		Dialog dialog = builder.create();
+		dialog.show();
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode == 100) {
+			if (resultCode == RESULT_OK) {
+				int pos = data.getExtras().getInt("pos");
+				mViewPager.setCurrentItem(pos);
+			}
+		}
+	}
 }

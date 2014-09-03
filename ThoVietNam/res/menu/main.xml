@@ -4,10 +4,9 @@
     tools:context="com.vinilearning.thovn.MainActivity" >
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_list"
         android:orderInCategory="100"
-        android:icon="@drawable/ic_bookmark_tick"
-        android:title="@string/action_settings"
+        android:title="@string/action_list"
         app:showAsAction="always"/>
     <item
         android:id="@+id/action_about"

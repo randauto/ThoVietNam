@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">100 Bài thơ Việt Nam</string>
+    <string name="action_settings">Đánh dấu</string>
+    <string name="action_about">Về chúng tôi</string>
+    <string name="action_list">Danh sách bài</string>
+    <string name="press_again_exit">Bấm lần nữa để thoát!</string>
+    <string name="about_us_text">Chúng tôi là Vinilearning. &lt;br />Nếu bạn thấy ứng dụng này hữu ích cho bạn, xin hãy đánh giá 5 sao!&lt;br/>Website của chúng tôi: &lt;a href=\'www.vinilearning.com\'>www.vinilearning.com&lt;/a></string>
+    <string name="cancel">Hủy</string>
+    <string name="ok">OK</string>
+    <string name="close">Đóng</string>
+    <string name="aboutus">Về chúng tôi</string>
+    <string name="vote5star">Đánh giá 5 sao!</string>
+    <string name="website_vini">http://www.vinilearning.com</string>
+    <string name="lesson">"Bài "</string>
+    <string name="no">Không</string>
+    <string name="yes">Có</string>
+    <string name="qa_bookmark">Bạn có muốn đánh dấu bài đang đọc?</string>
+
+</resources>

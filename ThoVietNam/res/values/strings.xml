@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Tho Viet Nam</string>
+    <string name="app_name">100 Poems Viet Nam</string>
     <string name="action_settings">Bookmarks</string>
     <string name="action_about">About us</string>
+    <string name="action_list">List lesson</string>
+    <string name="press_again_exit">Press Back againt to exit!</string>
+    <string name="about_us_text">We are Vinilearning. &lt;br />If you feeling this app is useful for you, please vote 5 star!&lt;br/>Us website: &lt;a href=\'www.vinilearning.com\'>www.vinilearning.com&lt;/a></string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="close">Close</string>
+    <string name="aboutus">About Us</string>
+    <string name="vote5star">Vote 5 star!</string>
+    <string name="website_vini">http://www.vinilearning.com</string>
+    <string name="version">"Version: "</string>
+    <string name="lesson">"Lesson "</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="qa_bookmark">Do you want to bookmark this lesson?</string>
 
 </resources>
