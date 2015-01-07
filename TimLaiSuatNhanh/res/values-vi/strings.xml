@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tìm lãi suất nhanh</string>
+    <string name="app_list">Lãi suất</string>
+    <string name="action_settings">Các ứng dụng</string>
+    <string name="action_search">Tìm lãi suất</string>
+    <string name="about_us">https://play.google.com/store/search?q=vinilearning</string>
+
+</resources>

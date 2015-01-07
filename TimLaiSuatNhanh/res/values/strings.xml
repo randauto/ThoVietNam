@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Find interest rate fast</string>
+    <string name="app_list">Find interest</string>
+    <string name="action_settings">More Apps</string>
+    <string name="action_search">Search</string>
+    <string name="about_us">https://play.google.com/store/search?q=vinilearning</string>
+
+</resources>
